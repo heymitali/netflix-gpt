@@ -8,7 +8,8 @@ import {
 import { auth } from "../utils/firebase";
 import { addUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
-import BrowseHeader from "./BrowseHeader";
+import Header from "./Header";
+import { LOGIN_BG } from "../utils/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -80,12 +81,12 @@ const Login = () => {
 
   return (
     <div>
-      <BrowseHeader />
+      <Header />
       <div className="">
         <div className="absolute w-full h-full bg-black bg-opacity-55 z-10"></div>
         <img
           className="absolute w-full h-full object-cover"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={LOGIN_BG}
           alt="background"
         />
       </div>
