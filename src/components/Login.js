@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Header from "./Header";
 import checkValidData from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
@@ -7,12 +6,15 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { addUser } from "../utils/userSlice";
+import { useDispatch } from "react-redux";
+import BrowseHeader from "./BrowseHeader";
 
 const Login = () => {
+  const dispatch = useDispatch();
+
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
 
   const name = useRef(null);
   const email = useRef(null);
@@ -25,7 +27,6 @@ const Login = () => {
   const handleButtonClick = () => {
     const message = checkValidData(email.current.value, password.current.value);
     setErrorMessage(message);
-
     if (message) return;
 
     if (!isSignInForm) {
@@ -37,17 +38,25 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          updateProfile(user, {
-            displayName: name.current.value,
-            photoURL: null,
-          });
-          console.log(user);
-          navigate("/browse");
+          updateProfile(user, { displayName: name?.current?.value })
+            .then(() => {
+              const { uid, email, displayName } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                })
+              );
+            })
+            .catch((error) => {
+              setErrorMessage(error.message);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          setErrorMessage(errorCode + " " + errorMessage);
+          setErrorMessage(errorCode + "-" + errorMessage);
         });
     } else {
       signInWithEmailAndPassword(
@@ -58,24 +67,20 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          updateProfile(user, {
-            displayName: name.current.value,
-            photoURL: null,
-          });
-          console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
-          const errorCode = error.code;
-          if (errorCode === "auth/invalid-credential")
+          if (error.code === "auth/invalid-credential") {
             setErrorMessage("Invalid credentials! Try again.");
+          } else {
+            console.log(error.message);
+          }
         });
     }
   };
 
   return (
     <div>
-      <Header />
+      <BrowseHeader />
       <div className="">
         <div className="absolute w-full h-full bg-black bg-opacity-55 z-10"></div>
         <img

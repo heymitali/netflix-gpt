@@ -24,18 +24,7 @@ const Body = () => {
       element: <Error />,
     },
   ]);
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        const { uid, email, displayName } = user;
-        dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
-      } else {
-        // User is signed out
-        dispatch(removeUser());
-      }
-    });
-  }, []);
+
   return (
     <div>
       <RouterProvider router={appRouter} />
