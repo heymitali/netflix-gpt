@@ -54,7 +54,7 @@ function Header() {
             />
             <button
               onClick={handleSignOut}
-              className="font-bold ml-4 mt-0 mr-10 mb-4 p-1"
+              className="font-bold ml-4 mt-0 mr-10 mb-4 p-1 text-white"
             >
               Sign Out
             </button>
