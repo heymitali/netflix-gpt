@@ -5,11 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { LOGO, USER_PROFILE_PIC } from "../utils/constants";
+import { toggleGptSearch } from "../utils/gptSlice";
 
 function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
+  const showGpt = useSelector((store) => store.gpt.showGptSearch);
 
   const handleSignOut = () => {
     signOut(auth)
@@ -20,6 +22,10 @@ function Header() {
         // An error happened.
         navigate("/error");
       });
+  };
+
+  const handleGptClick = () => {
+    dispatch(toggleGptSearch());
   };
 
   useEffect(() => {
@@ -35,7 +41,6 @@ function Header() {
         navigate("/");
       }
     });
-
     return () => unsubscribe();
   }, []);
 
@@ -45,21 +50,31 @@ function Header() {
         <img className=" m-2 w-32 h-14" src={LOGO} alt="logo"></img>
       </div>
       {user && (
-        <div className="flex w-1/2 justify-end">
-          <div>
-            <img
-              className="w-14 h-14 ml-4 mt-4 mr-10 mb-0 p-1 rounded-lg "
-              alt="usericon"
-              src={USER_PROFILE_PIC}
-            />
+        <>
+          <div className="flex">
             <button
-              onClick={handleSignOut}
-              className="font-bold ml-4 mt-0 mr-10 mb-4 p-1 text-white"
+              onClick={handleGptClick}
+              className="text-white w-24 h-12 m-3 p-1 font-medium text-sm bg-purple-600 rounded-lg"
             >
-              Sign Out
+              {showGpt ? "Back to Home" : "GPT Search"}
             </button>
+            <div className="grid">
+              <div>
+                <img
+                  className="w-14 h-14 m-2 rounded-lg "
+                  alt="usericon"
+                  src={USER_PROFILE_PIC}
+                />
+                <button
+                  onClick={handleSignOut}
+                  className="font-bold ml-4 mt-0 mr-10 mb-4 p-1 text-white"
+                >
+                  Sign Out
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

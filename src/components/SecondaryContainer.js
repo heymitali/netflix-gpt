@@ -12,11 +12,13 @@ const SecondaryContainer = () => {
           category={"Now Playing"}
           moviesData={movies?.nowPlayingMovies}
         />
+        <MovieList category={"TV Shows"} moviesData={movies?.tvShows} />
         <MovieList
           category={"Upcoming on Netflix"}
           moviesData={movies?.upComingMovies}
         />
         <MovieList category={"Top Rated"} moviesData={movies?.topRatedMovies} />
+
         <MovieList category={"Popular"} moviesData={movies?.popularMovies} />
       </div>
     </div>

@@ -2,8 +2,6 @@ import React from "react";
 import MovieCard from "./MovieCard";
 
 const MovieList = ({ category, moviesData }) => {
-  // console.log("data >>>>", moviesData);
-
   return (
     <div className="">
       <h1 className="m-2 p-2">{category}</h1>
