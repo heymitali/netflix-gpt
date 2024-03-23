@@ -54,12 +54,12 @@ function Header() {
           <div className="flex">
             <button
               onClick={handleGptClick}
-              className="text-white w-24 h-12 m-3 p-1 font-medium text-sm bg-purple-600 rounded-lg"
+              className="text-white w-28 h-12 m-3 p-1 font-medium text-sm bg-purple-600 rounded-lg"
             >
               {showGpt ? "Back to Home" : "GPT Search"}
             </button>
-            <div className="grid">
-              <div>
+            <div className="">
+              <div className="grid items-center">
                 <img
                   className="w-14 h-14 m-2 rounded-lg "
                   alt="usericon"
@@ -67,7 +67,7 @@ function Header() {
                 />
                 <button
                   onClick={handleSignOut}
-                  className="font-bold ml-4 mt-0 mr-10 mb-4 p-1 text-white"
+                  className="font-bold ml-4 mt-0 mr-10 mb-4 p-2 text-white bg-gray-500 bg-opacity-70 rounded-lg"
                 >
                   Sign Out
                 </button>
