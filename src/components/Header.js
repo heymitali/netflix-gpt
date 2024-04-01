@@ -5,13 +5,17 @@ import { useNavigate } from "react-router-dom";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { LOGO, USER_PROFILE_PIC } from "../utils/constants";
-import { toggleGptSearch } from "../utils/gptSlice";
 
 function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
   const showGpt = useSelector((store) => store.gpt.showGptSearch);
+
+  const handleLogoClick = () => {
+    if (user) navigate("/browse");
+    else navigate("/");
+  };
 
   const handleSignOut = () => {
     signOut(auth)
@@ -25,7 +29,8 @@ function Header() {
   };
 
   const handleGptClick = () => {
-    dispatch(toggleGptSearch());
+    // dispatch(toggleGptSearch());
+    navigate("/gptSearch");
   };
 
   useEffect(() => {
@@ -47,7 +52,12 @@ function Header() {
   return (
     <div className="absolute w-screen p-2 m-2 z-20 flex justify-between ">
       <div className="flex w-1/2 justify-start">
-        <img className=" m-2 w-32 h-14" src={LOGO} alt="logo"></img>
+        <img
+          className=" m-2 w-32 h-14"
+          src={LOGO}
+          alt="logo"
+          onClick={handleLogoClick}
+        />
       </div>
       {user && (
         <>

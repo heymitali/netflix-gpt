@@ -7,6 +7,8 @@ export const LOGIN_BG =
 export const USER_PROFILE_PIC =
   "https://occ-0-3215-3663.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABRH7L1z339SB5FvV78__fxkoivAD8xiqCgV3nkQtvWnGpEfaj6cFusLqDv88jdJTAsJOGu9TgwZbUB9ZkdtuOUMCb3I3P-8.png?r=f6f";
 
+export const GPT_BG_PIC = require("./assets/moviesBg.jpg");
+
 export const API_OPTIONS = {
   method: "GET",
   headers: {

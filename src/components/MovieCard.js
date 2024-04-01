@@ -1,7 +1,15 @@
 import React from "react";
 import { IMG_CDN_URL } from "../utils/constants";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/player/" + movie.id);
+    console.log(movie);
+  };
+
   if (
     !movie.poster_path ||
     movie.poster_path === "" ||
@@ -9,7 +17,7 @@ const MovieCard = ({ movie }) => {
   )
     return;
   return (
-    <div>
+    <div onClick={handleClick}>
       <div className="w-48 px-2">
         <img
           className="rounded-sm"

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import getMovieRecommendations from "../utils/openai";
-import searchMovie from "../hooks/searchMovie";
+import searchMovie from "../hooks/useSearchMovie";
 import { useDispatch } from "react-redux";
 import { addMovieResults } from "../utils/gptSlice";
 
@@ -31,7 +31,7 @@ const GptSearchBar = () => {
   return (
     <div className="flex justify-around ">
       <form
-        className="w-1/2 bg-red-600 rounded-lg mt-80"
+        className="w-1/2 bg-black rounded-lg mt-80"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
@@ -41,7 +41,7 @@ const GptSearchBar = () => {
         />
         <button
           onClick={handleGPTSearchClick}
-          className="bg-red-400 m-2 rounded-lg w-20 p-2 text-white"
+          className="bg-red-600 m-2 rounded-lg w-20 p-2 text-white"
         >
           Find
         </button>
