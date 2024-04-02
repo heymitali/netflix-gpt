@@ -50,7 +50,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="absolute w-screen p-2 m-2 z-20 flex justify-between ">
+    <div className="absolute w-screen p-2 m-2 z-20 flex justify-between">
       <div className="flex w-1/2 justify-start">
         <img
           className=" m-2 w-32 h-14"
@@ -60,31 +60,39 @@ function Header() {
         />
       </div>
       {user && (
-        <>
-          <div className="flex">
-            <button
-              onClick={handleGptClick}
-              className="text-white w-28 h-12 m-3 p-1 font-medium text-sm bg-purple-600 rounded-lg"
+        <div className="flex">
+          <button
+            onClick={handleGptClick}
+            className="text-white mr-5 text-[1.1rem] border-gray-200 border-2 w-[150px] p-2 h-12 mt-4 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
+          >
+            <svg
+              fill="#ffffff"
+              className="w-6 float-left"
+              viewBox="0 0 488.4 488.4"
+              stroke="#ffffff"
             >
+              <g id="SVGRepo_iconCarrier">
+                <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z" />
+              </g>
+            </svg>
+            <span className="font-bold">
               {showGpt ? "Back to Home" : "GPT Search"}
-            </button>
-            <div className="">
-              <div className="grid items-center">
-                <img
-                  className="w-14 h-14 m-2 rounded-lg "
-                  alt="usericon"
-                  src={USER_PROFILE_PIC}
-                />
-                <button
-                  onClick={handleSignOut}
-                  className="font-bold ml-4 mt-0 mr-10 mb-4 p-2 text-white bg-gray-500 bg-opacity-70 rounded-lg"
-                >
-                  Sign Out
-                </button>
-              </div>
-            </div>
-          </div>
-        </>
+            </span>
+          </button>
+          <button
+            className="grid items-center mr-8 hover:bg-gray-800 hover:bg-opacity-60 p-2 rounded-lg"
+            onClick={handleSignOut}
+          >
+            <img
+              className="ml-[2px] h-12 rounded-lg"
+              alt="usericon"
+              src={USER_PROFILE_PIC}
+            />
+            <span className="font-semibold mt-1 text-white rounded-lg text-[12px]">
+              Sign Out
+            </span>
+          </button>
+        </div>
       )}
     </div>
   );

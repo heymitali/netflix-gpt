@@ -1,5 +1,5 @@
 import React from "react";
-import MovieList from "./VideoList";
+import VideoList from "./VideoList";
 import { useSelector } from "react-redux";
 import { MOVIE_CONTENT, TV_SHOW_CONTENT } from "../utils/constants";
 
@@ -7,29 +7,29 @@ const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
 
   return (
-    <div className="bg-black ">
-      <div className="px-4 -mt-28 overflow-hidden text-white relative z-20 w-screen text-xl">
-        <MovieList
+    <div className="bg-black pl-12 md:pl-12 md:mt-[-10%] xl:mt-[-15%] w-screen">
+      <div className="-mt-28 overflow-hidden text-white relative z-20 text-xl">
+        <VideoList
           category={"Now Playing"}
           moviesData={movies?.nowPlayingMovies}
           contentType={MOVIE_CONTENT}
         />
-        <MovieList
+        <VideoList
           category={"TV Shows"}
           moviesData={movies?.tvShows}
           contentType={TV_SHOW_CONTENT}
         />
-        <MovieList
+        <VideoList
           category={"Upcoming on Netflix"}
           moviesData={movies?.upComingMovies}
           contentType={MOVIE_CONTENT}
         />
-        <MovieList
+        <VideoList
           category={"Top Rated"}
           moviesData={movies?.topRatedMovies}
           contentType={MOVIE_CONTENT}
         />
-        <MovieList
+        <VideoList
           category={"Popular"}
           moviesData={movies?.popularMovies}
           contentType={MOVIE_CONTENT}

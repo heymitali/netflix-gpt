@@ -6,7 +6,7 @@ const VideoBackground = ({ movieId }) => {
   const trailerVideo = useSelector((store) => store.movies?.trailerVideo);
 
   return (
-    <div className="h-1/2 max-h-[1000px] overflow-hidden ">
+    <div className="h-full w-full max-h-[1000px] overflow-hidden">
       <iframe
         onClick={(e) => e.preventDefault()}
         className="w-screen aspect-video scale-150"

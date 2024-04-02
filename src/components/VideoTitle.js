@@ -10,18 +10,18 @@ const VideoTitle = ({ title, overview, id }) => {
   };
 
   return (
-    <div className="mt-52 ml-12 p-2 w-1/2 absolute text-white z-30">
-      <h1 className="text-4xl py-4 font-bold">{title}</h1>
-      <p>{overview}</p>
+    <div className="mt-[16rem] ml-12 p-2 w-1/2 absolute text-white z-30">
+      <h1 className="text-5xl py-4 font-bold">{title}</h1>
+      <p className="text-xl">{overview}</p>
       <div className="py-4 flex justify-start">
         <button
-          className="my-4 mr-4 px-6 py-2 h-12 bg-white text-black rounded-lg hover:bg-opacity-50"
+          className="text-lg my-4 mr-4 px-10 py-3 bg-white text-black rounded-lg hover:bg-opacity-60 font-semibold"
           onClick={handlePlayBtn}
         >
-          ▶ Play
+          ▶&nbsp;&nbsp;&nbsp;Play
         </button>
-        <button className="my-4 mr-4 px-6 py-2  text-white bg-gray-500 bg-opacity-80 rounded-lg ">
-          More Info
+        <button className="text-lg my-4 mr-4 px-8 py-3 text-white bg-gray-500 bg-opacity-80 hover:bg-opacity-60 rounded-lg font-semibold">
+          ⓘ&nbsp;&nbsp;&nbsp;More Info
         </button>
       </div>
     </div>

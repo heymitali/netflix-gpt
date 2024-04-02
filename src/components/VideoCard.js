@@ -21,10 +21,13 @@ const MovieCard = ({ videoData, contentType }) => {
   }
 
   return (
-    <div onClick={handleClick} className="cursor-pointer">
-      <div className="w-48 px-2">
+    <div
+      onClick={handleClick}
+      className="cursor-pointer border-2 border-transparent hover:border-white mx-2 rounded-md"
+    >
+      <div className="relative w-48 h-[300px]">
         <img
-          className="rounded-sm"
+          className="absolute h-[100%] object-cover overflow-hidden rounded-sm"
           alt={videoData.title}
           src={IMG_CDN_URL + videoData.poster_path}
         ></img>
