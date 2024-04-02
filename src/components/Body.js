@@ -24,7 +24,7 @@ const Body = () => {
       element: <Player />,
     },
     {
-      path: "/gptSearch",
+      path: "/gpt-search",
       element: <GptSearchPage />,
     },
   ]);

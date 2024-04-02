@@ -17,7 +17,6 @@ const Browse = () => {
   return (
     <div className="w-screen">
       <Header />
-
       <MainContainer />
       <SecondaryContainer />
     </div>

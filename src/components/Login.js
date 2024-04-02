@@ -131,7 +131,7 @@ const Login = () => {
         >
           {isSignInForm
             ? "New to Netflix?  Sign Up Now"
-            : "Already regirtered? Sign In Now"}
+            : "Already registered? Sign In Now"}
         </p>
       </form>
     </div>

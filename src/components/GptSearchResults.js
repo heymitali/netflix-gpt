@@ -9,14 +9,15 @@ const GptSearchResults = () => {
   else if (movieResults.length === 0) {
     return (
       <div>
-        <h1 className="text-white text-3xl font-bold text-center">
-          Sorry, I could'nt suggest anything that matches your search
+        <h1 className="text-white text-4xl font-bold text-center mt-20">
+          Sorry, I could'nt suggest anything that matches your search. <br />
+          Please try again !!
         </h1>
       </div>
     );
   } else
     return (
-      <div>
+      <div className="mt-36 ml-8 pb-3">
         {movieNames.map((movieName, index) => (
           <VideoList
             key={index}

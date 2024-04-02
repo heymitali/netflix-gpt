@@ -29,19 +29,16 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="flex justify-around ">
-      <form
-        className="w-1/2 bg-black rounded-lg mt-80"
-        onSubmit={(e) => e.preventDefault()}
-      >
+    <div className="flex justify-center z-50">
+      <form className="rounded-lg" onSubmit={(e) => e.preventDefault()}>
         <input
           ref={searchText}
-          className="bg-purple-100 m-2 w-[80%] rounded-lg p-2 text-black"
+          className="m-2 w-[600px] rounded-lg p-3 text-black text-lg bg-white"
           placeholder="Feeling happy, sad, thrilled? Discover movies to match."
         />
         <button
           onClick={handleGPTSearchClick}
-          className="bg-red-600 m-2 rounded-lg w-20 p-2 text-white"
+          className="bg-red-600 rounded-lg w-[140px] ml-2 p-3 text-lg text-white font-bold"
         >
           Find
         </button>
