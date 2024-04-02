@@ -1,7 +1,7 @@
 import React from "react";
-import MovieCard from "./MovieCard";
+import VideoCard from "./VideoCard";
 
-const MovieList = ({ category, moviesData }) => {
+const VideoList = ({ category, moviesData, contentType }) => {
   return (
     <div className="h-auto min-h-[320px] p-4">
       <h1 className="m-2 p-2 text-white font-semibold text-2xl">{category}</h1>
@@ -10,7 +10,11 @@ const MovieList = ({ category, moviesData }) => {
           {" "}
           {moviesData &&
             moviesData.map((movie) => (
-              <MovieCard movie={movie} key={movie.id} />
+              <VideoCard
+                videoData={movie}
+                contentType={contentType}
+                key={movie.id}
+              />
             ))}
         </div>
       </div>
@@ -18,4 +22,4 @@ const MovieList = ({ category, moviesData }) => {
   );
 };
 
-export default MovieList;
+export default VideoList;

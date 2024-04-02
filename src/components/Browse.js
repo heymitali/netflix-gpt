@@ -6,7 +6,6 @@ import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpComingMovies from "../hooks/useUpComingMovies";
 import useTvShows from "../hooks/useTvShows";
-import { useSelector } from "react-redux";
 
 const Browse = () => {
   useNowPlayingMovies();

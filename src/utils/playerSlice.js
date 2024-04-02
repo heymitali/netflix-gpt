@@ -3,13 +3,17 @@ import { createSlice } from "@reduxjs/toolkit";
 const playerSlice = createSlice({
   name: "player",
   initialState: {
-    playerVideo: null,
+    moviePlayerVideo: null,
+    tvShowPlayerVideo: null,
   },
   reducers: {
-    addVideo: (state, action) => {
-      state.playerVideo = action.payload;
+    addMovieVideo: (state, action) => {
+      state.moviePlayerVideo = action.payload;
+    },
+    addTvShowVideo: (state, action) => {
+      state.tvShowPlayerVideo = action.payload;
     },
   },
 });
 export default playerSlice.reducer;
-export const { addVideo } = playerSlice.actions;
+export const { addMovieVideo, addTvShowVideo } = playerSlice.actions;

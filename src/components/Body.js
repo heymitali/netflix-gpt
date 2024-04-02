@@ -20,7 +20,7 @@ const Body = () => {
       element: <Error />,
     },
     {
-      path: "/player/:movieId",
+      path: "/player/:contentType/:videoId",
       element: <Player />,
     },
     {

@@ -13,7 +13,7 @@ const MainContainer = () => {
 
   return (
     <div className="w-screen">
-      <VideoTitle title={original_title} overview={overview} />
+      <VideoTitle title={original_title} id={id} overview={overview} />
       <VideoBackground movieId={id} />
     </div>
   );

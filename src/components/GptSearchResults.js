@@ -1,12 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import MovieList from "./MovieList";
+import VideoList from "./VideoList";
 
 const GptSearchResults = () => {
   const { movieResults, movieNames } = useSelector((store) => store.gpt);
 
   if (!movieResults) return;
-  //   console.log("movie results >>> " , movieResults)
   else if (movieResults.length === 0) {
     return (
       <div>
@@ -19,7 +18,7 @@ const GptSearchResults = () => {
     return (
       <div>
         {movieNames.map((movieName, index) => (
-          <MovieList
+          <VideoList
             key={index}
             category={movieName}
             moviesData={movieResults[index]}

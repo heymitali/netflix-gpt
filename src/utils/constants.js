@@ -59,3 +59,6 @@ export const MESSAGE_REFERENCE = [
       "Lagaan, 3 Idiots, Dangal, PK, Baahubali: The Beginning, Baahubali 2: The Conclusion, Rang De Basanti, Bajrangi Bhaijaan, Dilwale Dulhania Le Jayenge, Chennai Express",
   },
 ];
+
+export const MOVIE_CONTENT = "movie";
+export const TV_SHOW_CONTENT = "tv";
