@@ -22,7 +22,7 @@ const usePlayerVideo = (videoId, contentType) => {
     }
 
     const video = filteredData?.length ? filteredData[0] : json.results[0];
-    dispatch(addMovieVideo(video));
+    dispatch(addMovieVideo({ ...video, video_id: videoId }));
   };
 
   useEffect(() => {
