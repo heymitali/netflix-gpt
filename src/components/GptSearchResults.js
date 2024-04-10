@@ -17,7 +17,7 @@ const GptSearchResults = () => {
     );
   } else
     return (
-      <div className="mt-36 ml-8 pb-3">
+      <div className="mt-14 md:mt-20 xl:mt-32 ml-8 pb-3">
         {movieNames.map((movieName, index) => (
           <VideoList
             key={index}

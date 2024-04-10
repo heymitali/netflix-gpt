@@ -70,11 +70,11 @@ function Header() {
           {location.pathname !== "/gpt-search" && (
             <button
               onClick={handleGptClick}
-              className="text-white mr-5 text-[1.1rem] border-gray-200 border-2 w-[150px] p-2 h-12 mt-4 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
+              className="text-white text-[0.8rem] lg:text-[1.1rem] border-gray-200 border-2 w-[120px] lg:w-[150px] p-2 h-10 mt-5 mr-2 lg:p-2 lg:h-12 lg:mt-4 lg:mr-5 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
             >
               <svg
                 fill="#ffffff"
-                className="w-6 float-left"
+                className="w-4 lg:w-6 float-left"
                 viewBox="0 0 488.4 488.4"
                 stroke="#ffffff"
               >
@@ -88,7 +88,7 @@ function Header() {
           {location.pathname === "/gpt-search" && (
             <button
               onClick={handleGptClick}
-              className="text-white mr-5 text-[1.1rem] border-gray-200 border-2 w-[150px] p-2 h-12 mt-4 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
+              className="text-white text-[0.8rem] lg:text-[1.1rem] border-gray-200 border-2 w-[120px] lg:w-[150px] p-2 h-10 mt-5 mr-2 lg:p-2 lg:h-12 lg:mt-4 lg:mr-5 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
             >
               <span className="font-bold">Back to Home</span>
             </button>
