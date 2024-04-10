@@ -15,7 +15,7 @@ const VideoList = ({ category, moviesData, contentType }) => {
 
   return (
     <div className="h-auto mb-[2.5vw]">
-      <h1 className="m-2 p-2 text-white font-semibold text-md sm:text-sm md:text-md lg:text-lg xl:text-2xl">
+      <h1 className="m-2 p-2 text-white font-semibold text-sm sm:text-sm md:text-md lg:text-lg xl:text-2xl">
         {category}
       </h1>
       <div className="flex overflow-x-scroll">

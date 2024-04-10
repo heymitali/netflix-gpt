@@ -70,7 +70,7 @@ function Header() {
           {location.pathname !== "/gpt-search" && (
             <button
               onClick={handleGptClick}
-              className="text-white text-[0.8rem] lg:text-[1.1rem] border-gray-200 border-2 w-[120px] lg:w-[150px] p-2 h-10 mt-5 mr-2 lg:p-2 lg:h-12 lg:mt-4 lg:mr-5 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
+              className="text-white text-[0.65rem] sm:text-[0.8rem] lg:text-[1.1rem] border-gray-200 border-2 w-[95px] sm:w-[120px] lg:w-[150px] p-1 sm:p-2 h-10 mt-5 mr-2 lg:p-2 lg:h-12 lg:mt-4 lg:mr-5 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
             >
               <svg
                 fill="#ffffff"
@@ -88,13 +88,13 @@ function Header() {
           {location.pathname === "/gpt-search" && (
             <button
               onClick={handleGptClick}
-              className="text-white text-[0.8rem] lg:text-[1.1rem] border-gray-200 border-2 w-[120px] lg:w-[150px] p-2 h-10 mt-5 mr-2 lg:p-2 lg:h-12 lg:mt-4 lg:mr-5 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
+              className="text-white text-[0.6rem] sm:text-[0.8rem] lg:text-[1.1rem] border-gray-200 border-2 w-[90px] sm:w-[120px] lg:w-[150px] p-1 sm:p-2 h-10 mt-5 mr-2 lg:p-2 lg:h-12 lg:mt-4 lg:mr-5 rounded-md bg-black bg-opacity-50 hover:shadow-[0_8px_20px_rgba(32,_198,_219,_0.7)]"
             >
               <span className="font-bold">Back to Home</span>
             </button>
           )}
           <button
-            className="grid items-center mr-8 hover:bg-gray-800 hover:bg-opacity-60 p-2 rounded-lg"
+            className="grid items-center mr-6 sm:mr-8 hover:bg-gray-800 hover:bg-opacity-60 p-2 rounded-lg"
             onClick={handleSignOut}
           >
             <img
@@ -102,7 +102,7 @@ function Header() {
               alt="usericon"
               src={USER_PROFILE_PIC}
             />
-            <span className="font-semibold mt-1 text-white rounded-lg text-[12px]">
+            <span className="font-semibold mt-1 text-white rounded-lg text-[10px] sm:text-[12px]">
               Sign Out
             </span>
           </button>

@@ -15,7 +15,7 @@ const Browse = () => {
   useTvShows();
 
   return (
-    <div className="w-screen">
+    <div className="w-screen bg-black">
       <Header />
       <MainContainer />
       <SecondaryContainer />

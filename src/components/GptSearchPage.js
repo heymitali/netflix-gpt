@@ -16,7 +16,7 @@ const GptSearchPage = () => {
         />
       </div>
       <div className="w-screen">
-        <div className="text-white font-extrabold text-xl md:text-2xl lg:text-4xl xl:text-5xl text-center w-full pt-[10rem] lg:pt-[14rem] 2xl:pt-[16rem] mb-6">
+        <div className="text-white font-extrabold text-md sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-center w-full pt-[10rem] lg:pt-[14rem] 2xl:pt-[16rem] mb-6">
           <span>Navigate the movieverse with AI precision!</span>
         </div>
 

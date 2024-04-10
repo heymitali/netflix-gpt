@@ -7,7 +7,7 @@ const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
 
   return (
-    <div className="bg-black pl-8 lg:pl-12 mt-[2rem] sm:mt-[2rem] md:mt-[2rem] xl:mt-[-15%] pb-8 w-screen">
+    <div className="bg-black pl-5 sm:pl-8 lg:pl-12 mt-[5.3rem] sm:mt-[2rem] md:mt-[2rem] xl:mt-[-15%] pb-8 w-screen">
       <div className="-mt-28 overflow-hidden text-white relative z-20 text-xl">
         <VideoList
           category={"Now Playing"}

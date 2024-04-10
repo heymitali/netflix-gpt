@@ -33,7 +33,7 @@ const GptSearchBar = () => {
       <form className="rounded-lg" onSubmit={(e) => e.preventDefault()}>
         <input
           ref={searchText}
-          className="m-2 w-[400px] p-2 px-3 text-xs sm:text-xs md:text-sm lg:w-[500px] xl:w-[600px] xl:p-3 rounded-lg text-black lg:text-lg bg-white"
+          className="m-2 w-[280px] sm:w-[400px] p-2 px-3 text-xs sm:text-xs md:text-sm lg:w-[500px] xl:w-[600px] xl:p-3 rounded-lg text-black lg:text-lg bg-white"
           placeholder="Feeling happy, sad, thrilled? Discover movies to match."
         />
         <button

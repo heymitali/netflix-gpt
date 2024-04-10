@@ -25,7 +25,7 @@ const MovieCard = ({ videoData, contentType }) => {
       onClick={handleClick}
       className="cursor-pointer border-2 border-transparent hover:border-white mx-1 lg:mx-2 rounded-md"
     >
-      <div className="relative w-36 h-[200px] md:w-40 md:h-[230px] lg:w-48 lg:h-[300px]">
+      <div className="relative w-24 h-[150px] sm:w-36 sm:h-[200px] md:w-40 md:h-[230px] lg:w-48 lg:h-[300px]">
         <img
           className="absolute h-[100%] w-full object-cover overflow-hidden rounded-sm"
           alt={videoData.title}
